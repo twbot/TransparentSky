@@ -1,0 +1,15 @@
+{
+  "short_name": "Transparent Sky",
+  "name": "Transparent Sky Website",
+  "icons": [
+    {
+      "src": "TSCropped.jpeg",
+      "sizes": "200x200",
+      "type": "image/jpeg"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,129 @@
+@media (max-width: 800px) {
+
+}
+
+@media (min-width: 800px) {
+    
+}
+
+.navbar {
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition: top 0.6s;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.navbar .logo{
+    float: left;
+    height: 50px;
+    width: 50px;
+}
+
+.navbar .logo-letters{
+    float: left;
+    height: 50px;
+    width: 350px;
+    margin-left: 20px;
+}
+
+.navbar .link-section {
+    height: 50px;
+    width: 600px;
+    float: right;
+    border: 1px solid transparent;
+}
+
+.navbar .link-section div {
+    width: 25%;
+    height:inherit;
+    float: left;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border: 1px solid transparent;
+}
+
+.navbar .link-section div a {
+    display:block;
+    text-align: center;
+    text-decoration: none; /* no underline */
+    color:#000;
+    cursor: pointer;
+}
+
+.navbar .link-section div a:hover{
+    /* text-decoration: underline; */
+}
+
+.navbar--hidden {
+    top: -50px;
+    content: none;
+}
+
+.navbar--hidden  > * {
+    visibility: hidden;
+}
+
+  
+.headerlink-dot {
+    margin-top: -0.5rem;
+    opacity: 0;
+    transition: opacity 200ms linear;
+}
+
+.navbarlink-underline {
+    margin-top: -0.5rem;
+    opacity: 0;
+    transition: opacity 200ms linear;
+}
+
+.headerlink-title:hover .headerlink-dot {
+    opacity: 1;
+}
+
+.headerlink-dot-active {
+    margin-top: -0.5rem;
+    display: block;
+}
+
+/* Underline styles */
+a {
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+}
+
+/* Fade in */
+a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    /* background-color: #1880c3; */
+    background-color: transparent;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+
+a:hover::after,
+a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+}
+
+/* Scale from center */
+li:nth-child(3) a::after {
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+}
+  
+li:nth-child(3) a:hover::after,
+li:nth-child(3) a:focus::after{
+    transform: scale(1);
+}
